@@ -1,0 +1,41 @@
+    <section id="about" class="py-10 lg:py-20">
+        <div class="container">
+            <div class="grid 2xl:grid-cols-2 gap-6 items-center">
+                <div class="flex justify-center">
+                    <div class="inline-block p-6 rounded-xl border border-primary/20 bg-primary/10">
+                        <img src="/images/uploads/<%= jsonData.about.images %>" class="rounded-lg" alt="">
+                    </div>
+                </div>
+
+                <div>
+                    <span class="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-200 text-default-950"><%= jsonData.about.span_title %></span>
+                    <h2 class="md:text-4xl text-3xl font-medium text-default-950 mt-6"><%= jsonData.about.title %></h2>
+                    <p class="text-base font-medium mt-4"><%= jsonData.about.subtitle %></p>
+                    <div class="grid md:grid-cols-2 gap-6 mt-6 mb-10">
+
+						<% jsonData.about.about_list.forEach(function(data) { %>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 flex items-center justify-center rounded-md text-white bg-primary">
+                                <i data-lucide="check" class="h-6 w-6"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-default-950"><%= data.title %></h3>
+                        </div>
+						<% }); %>
+                    </div>
+
+                    <div class="2xl:-ms-32">
+                        <div class="p-6 rounded-xl border border-default-200 bg-white dark:bg-default-50">
+                            <div class="grid md:grid-cols-3">
+								<% jsonData.about.about_count.forEach(function(data) { %>
+								<div class="text-center">
+                                    <h2 class="text-4xl font-medium text-default-950"><%= data.count %></h2>
+                                    <p class="text-lg font-medium mt-1"><%= data.title %></p>
+                                </div>
+								<% }); %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

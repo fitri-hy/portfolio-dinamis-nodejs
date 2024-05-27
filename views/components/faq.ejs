@@ -1,0 +1,35 @@
+    <section id="faq" class="py-10 lg:py-20">
+        <div class="container">
+            <div class="flex items-end justify-between mb-10">
+                <div class="max-w-2xl mx-auto text-center">
+                    <span class="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-200 text-default-950"><%= jsonData.services.span_title %></span>
+                    <h2 class="text-3xl font-medium capitalize text-default-950 my-4"><%= jsonData.faq.title %></h2>
+                    <p class="text-base font-medium "><%= jsonData.services.subtitle %></p>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="hs-accordion-group space-y-4">
+                    
+					<% jsonData.faq.faq_list.forEach(function(data) { %>
+					<div class="hs-accordion border border-primary/20 hs-accordion-active:bg-primary/10 rounded-lg overflow-hidden" id="faq-3">
+                        <button class="hs-accordion-toggle capitalize px-6 py-4 inline-flex items-center justify-between gap-x-3 w-full text-left text-default-950 transition-all" aria-controls="faq-3">
+                            <h5 class="text-base font-semibold flex">
+                                <%= data.title %>
+                            </h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-up" class="lucide lucide-chevron-up h-4 w-4 transition-all duration-500 hs-accordion-active:-rotate-180">
+                                <path d="m18 15-6-6-6 6"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-3" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="faq-3">
+                            <div class="px-6 pb-4 pt-0">
+                                <p class="text-sm font-medium">><%= data.desc %></p>
+                            </div>
+                        </div>
+                    </div>
+					<% }); %>
+					
+                </div>
+            </div>
+        </div>
+    </section>

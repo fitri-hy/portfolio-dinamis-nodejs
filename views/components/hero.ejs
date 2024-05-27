@@ -1,0 +1,25 @@
+    <section id="home" class="py-44 flex items-center justify-center bg-cover bg-gradient-to-l from-primary/5 to-primary/10 via-primary/0">
+        <div class="container">
+            <div class="grid xl:grid-cols-2 grid-cols-1 gap-6 items-center">
+                <div>
+                    <h2 class="md:text-5xl/tight text-4xl font-medium text-default-950"><%= jsonData.hero.title %></h2>
+                    <p class="text-base font-medium mt-6"><%= jsonData.hero.subtitle %></p>
+                    <div class="flex flex-wrap items-center gap-6 mt-10">
+                        <a href="<%= jsonData.hero.button_url %>" class="inline-flex items-center justify-center gap-2 text-base py-3 px-8 rounded-md text-white bg-primary/90 hover:bg-primary transition-all duration-700"><%= jsonData.hero.button_text %>
+                            <i data-lucide="move-right" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative">
+                        <div class="flex justify-center">
+                            <div class="inline-block p-6 rounded-xl border border-primary/10 bg-primary/5">
+                                <img src="/images/uploads/<%= jsonData.hero.banner %>" class="xl:h-[500px] xl:w-full rounded-md mx-auto" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

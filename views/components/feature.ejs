@@ -1,0 +1,22 @@
+    <section class="py-10 lg:py-20">
+        <div class="container">
+            <div class="flex items-end justify-between mb-10">
+                <div class="max-w-2xl mx-auto text-center">
+                    <span class="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-200 text-default-950"><%= jsonData.featured.span_title %></span>
+                    <h2 class="md:text-4xl/tight text-3xl font-medium capitalize text-default-950 mt-4"><%= jsonData.featured.title %></h2>
+                    <p class="text-base font-medium mt-4"><%= jsonData.featured.subtitle %></p>
+                </div>
+            </div>
+
+            <div class="p-6 rounded-xl border border-primary/20 bg-primary/5">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+                    <% jsonData.featured.featured_card.forEach(function(data) { %>
+					<div class="p-6 rounded-lg border border-primary/20 bg-white text-center dark:bg-default-50">
+                        <h2 class="text-xl font-medium text-default-950"><%= data.title %></h2>
+                        <p class="text-base font-medium mt-4"><%= data.subtitle %></p>
+                    </div>
+					<% }); %>
+                </div>
+            </div>
+        </div>
+    </section>

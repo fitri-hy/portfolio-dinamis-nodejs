@@ -1,0 +1,24 @@
+    <section id="services" class="py-10 lg:py-20">
+        <div class="container">
+            <div class="flex items-end justify-between mb-10">
+                <div class="max-w-2xl mx-auto text-center">
+                    <span class="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-200 text-default-950"><%= jsonData.services.span_title %></span>
+                    <h2 class="md:text-4xl text-3xl font-medium capitalize text-default-950 my-4"><%= jsonData.services.title %></h2>
+                    <p class="text-base font-medium"><%= jsonData.services.subtitle %></p>
+                </div>
+            </div>
+
+            <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+                <% jsonData.services.services_card.forEach(function(data) { %>
+				<div class="p-6 rounded-xl border border-default-200 text-center hover:border-sky-500/20 hover:bg-sky-500/5 transition-all duration-500">
+                    <div class="w-16 h-16 flex items-center justify-center mx-auto rounded-full border border-sky-500/40 text-sky-500 bg-sky-500/20">
+                        <i data-lucide="<%= data.icon %>" class="h-10 w-10 mx-auto"></i>
+                    </div>
+
+                    <h2 class="text-3xl font-medium text-default-950 mt-4"><%= data.title %></h2>
+                    <p class="text-base font-medium mt-3"><%= data.subtitle %></p>
+                </div>
+				<% }); %>
+            </div>
+        </div>
+    </section>

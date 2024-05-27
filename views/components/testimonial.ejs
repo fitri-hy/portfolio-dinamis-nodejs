@@ -1,0 +1,42 @@
+    <section id="testimonials" class="py-10 lg:py-20">
+        <div class="container">
+            <div class="flex items-end justify-between mb-10">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="md:text-4xl text-3xl font-medium text-default-950 mb-4"><%= jsonData.testimonial.title %></h2>
+                    <p class="text-base font-medium"><%= jsonData.testimonial.subtitle %></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="relative gap-8 m-auto flex overflow-hidden">
+                    <div class="marquee__group gap-8 flex justify-around flex-shrink-0 min-w-full">
+						<% jsonData.testimonial.testimonial_card.forEach(function(data) { %>
+                        <div>
+                            <div class="m-2 relative w-full lg:w-full">
+                                <div class="group">
+                                    <div class="border border-default-200 rounded-xl w-full translate-x-1 transition-all duration-500">
+                                        <div class="bg-white rounded-xl h-full p-6 relative z-10 dark:bg-default-50">
+                                            <div class="flex items-center gap-3">
+                                                <div class="p-1 rounded-full border">
+                                                    <img src="/images/uploads/<%= data.images %>" class="h-12 w-12 rounded-full" alt="">
+                                                </div>
+                                                <div>
+                                                    <h3 class="text-xl font-medium text-default-950"><%= data.name %></h3>
+                                                    <p class="text-sm font-normal mt-1"><%= data.status %></p>
+                                                </div>
+                                            </div>
+                                            <p class="text-base font-medium mt-4 max-w-xs">
+                                                <%= data.content %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bg-default-200 rounded-xl h-full left-0 top-0 w-full -z-10"></div>
+                                </div>
+                            </div>
+                        </div>
+						<% }); %>
+					</div>
+                </div>
+            </div>
+        </div>
+    </section>

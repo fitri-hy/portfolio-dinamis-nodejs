@@ -1,0 +1,15 @@
+    <section class="py-10 lg:pb-20">
+        <div class="container">
+            <div class="rounded-lg bg-cover bg-no-repeat bg-primary/5 border border-primary/20">
+                <div class="py-20 px-6">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="md:text-4xl text-3xl font-medium text-default-950 mt-5"><%= jsonData.cta.title %></h2>
+                        <p class="text-base font-medium text-default-9500 mt-6"><%= jsonData.cta.title %></p>
+                        <div class="inline-block">
+                            <a href="<%= jsonData.cta.button_url %>" class="flex items-center justify-center gap-2 border border-primary text-white bg-primary/90 py-2 px-6 mt-6 rounded-md hover:bg-primary transition-all duration-500"><%= jsonData.cta.button_text %> <i data-lucide="move-right" class="h-5 w-5"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

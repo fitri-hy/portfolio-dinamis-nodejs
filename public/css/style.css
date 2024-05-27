@@ -1,0 +1,6 @@
+pre {
+	border-radius: 5px;
+	overflow: auto;
+	font-family: 'Courier New', Courier, monospace;
+	line-height: 1.5;
+}

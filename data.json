@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "title": "HyTech",
+    "description": "loren ipsum dolor",
+    "keywords": "test",
+    "author": "HyTech",
+    "favicon": "favicon-b2cb7bc5.ico"
+  },
+  "header": {
+    "logo_dark": "logo-dark-dc129ba6.png",
+    "logo_light": "logo-light-82928a21.png",
+    "button_text": "0896-1111-1111",
+    "button_url": "tel:089611111111"
+  },
+  "hero": {
+    "title": "Enhance Your Online Presence with Our Expertise",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "banner": "img-1-0feedb71.jpg",
+    "button_text": "Read More",
+    "button_url": "#"
+  },
+  "partners": {
+    "title": "Preferred Partner for Major Corporations",
+    "partners_img": [
+      {
+        "id": 1,
+        "images": "1-52ac3196.png"
+      },
+      {
+        "id": 2,
+        "images": "2-b64208fb.png"
+      },
+      {
+        "id": 3,
+        "images": "3-cc9f0d7e.png"
+      },
+      {
+        "id": 4,
+        "images": "4-a09c1173.png"
+      },
+      {
+        "id": 5,
+        "images": "5-a36f86d5.png"
+      }
+    ]
+  },
+  "featured": {
+    "span_title": "Our Features",
+    "title": "Potent SEO Strategies for Enhanced Website Traffic",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "featured_card": [
+      {
+        "id": 1,
+        "title": "Drive Sales Growth",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": 2,
+        "title": "Fuel Expansion",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": 3,
+        "title": "Focused Audience",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
+  },
+  "about": {
+    "images": "img-6-63138509.jpg",
+    "span_title": "Our About",
+    "title": "Fifteen Years of SEO Mastery",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+    "about_list": [
+      {
+        "id": 1,
+        "title": "Boot Your Business"
+      },
+      {
+        "id": 2,
+        "title": "Talented Teams"
+      },
+      {
+        "id": 3,
+        "title": "Marketing Support"
+      },
+      {
+        "id": 4,
+        "title": "24/7 Strong Support"
+      }
+    ],
+    "about_count": [
+      {
+        "id": 1,
+        "count": "247+",
+        "title": "Completed Projects"
+      },
+      {
+        "id": 2,
+        "count": "54+",
+        "title": "Satisfied Customers"
+      },
+      {
+        "id": 3,
+        "count": "43+",
+        "title": "Winning Awards"
+      }
+    ]
+  },
+  "services": {
+    "span_title": "Our Services",
+    "title": "Optimal SEO Services Tailored to Your Needs",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "services_card": [
+      {
+        "id": 1,
+        "icon": "airplay",
+        "title": "SEO Solutionss",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      },
+      {
+        "id": 2,
+        "icon": "circle-dollar-sign",
+        "title": "SEO Solutionss",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      },
+      {
+        "id": 3,
+        "icon": "mail",
+        "title": "SEO Solutionss",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      }
+    ]
+  },
+  "testimonial": {
+    "title": "Client Testimonials",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "testimonial_card": [
+      {
+        "id": 1,
+        "images": "img-1-1e9aa300.jpg",
+        "name": "Ryan Delk",
+        "status": "Client",
+        "content": "As a content marketer, I'm always looking for ways to streamline my workflow and create high-quality for me, and I don't know how I ever managed without it."
+      },
+      {
+        "id": 2,
+        "images": "img-2-a35f473e.jpg",
+        "name": "Marsel Fischer",
+        "status": "Client",
+        "content": "The solutions offered by your AI chatbots are truly impressive! We are able to communicate with our customers faster and more interacti."
+      },
+      {
+        "id": 3,
+        "images": "img-3-8c3c7453.jpg",
+        "name": "John Tayes",
+        "status": "Client",
+        "content": "I've tried other AI writing tools before, but this one is by far the best. The language is sophisticated and engaging, content to the next level."
+      }
+    ]
+  },
+  "blog": {
+    "span_title": "Our Blog",
+    "title": "Read the latest news",
+    "blog_card": [
+      {
+        "id": 1,
+        "images": "img-3-da7b7f5a.jpg",
+        "title": "Free advertising you online business.",
+        "button_text": "Read More",
+        "button_url": "#"
+      },
+      {
+        "id": 2,
+        "images": "img-4-bdc52b2e.jpg",
+        "title": "Effective Social Media Marketing Tactics for Small Businesses.",
+        "button_text": "Read More",
+        "button_url": "#"
+      },
+      {
+        "id": 3,
+        "images": "img-5-0ccedee0.jpg",
+        "title": "The Definitive SEO Guide: Enhancing Your Website's Visibility.",
+        "button_text": "Read More",
+        "button_url": "#"
+      }
+    ]
+  },
+  "faq": {
+    "span_title": "Our FAQ",
+    "title": "Find Your Answers Here",
+    "subtitle": "Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
+    "faq_list": [
+      {
+        "id": 1,
+        "title": "Is Subscription Upgrading Possible?",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "id": 2,
+        "title": "Guaranteed First-Page Google Placement?",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "id": 3,
+        "title": "Tailored Marketing Approaches?",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "id": 4,
+        "title": "Do You Offer Local SEO Services?",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "id": 5,
+        "title": "Is Blogging Crucial for SEO Success?",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "id": 6,
+        "title": "What's the ROI of Digital Marketing?",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Embark on Your SEO Journey with Us",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "button_text": "Get Starter",
+    "button_url": "#"
+  },
+  "footer": {
+    "company": "HyTech Group",
+    "copyright": "All Right Reserved."
+  },
+  "title": "Home - HyTech MsasasVC",
+  "author": "sasa",
+  "description": "Portofolio Disasanamis",
+  "keywords": "portofolio,sasa dinamis"
+}

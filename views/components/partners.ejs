@@ -1,0 +1,21 @@
+    <section class="py-10 lg:py-20">
+        <div class="container">
+            <div class="grid xl:grid-cols-6 grid-cols-1 gap-6 items-center">
+                <div class="xl:col-span-2">
+                    <h2 class="md:text-4xl/tight text-3xl font-medium text-default-950"><%= jsonData.partners.title %></h2>
+                </div>
+
+                <div class="xl:col-span-4">
+                    <div id="testimonial_directory" class="swiper">
+                        <div class="swiper-wrapper">
+                            <% jsonData.partners.partners_img.forEach(function(data) { %>
+							<div class="swiper-slide">
+                                <img src="/images/uploads/<%= data.images %>" alt="">
+                            </div>
+							<% }); %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
