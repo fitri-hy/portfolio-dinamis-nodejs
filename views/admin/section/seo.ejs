@@ -1,0 +1,29 @@
+<div id="seo" class="flex flex-col gap-2 bg-slate-800 rounded-md px-4 py-6">
+    <h2 class="mb-6 font-extrabold text-2xl text-gray-200">SEO Settings</h2>
+    <form action="/admin/edit-seo" method="POST" enctype="multipart/form-data">
+        <div class="grid gird-cols-1 lg:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2">
+                <label for="title">Title<span class="text-rose-600">*</span></label>
+                <input type="text" id="title" name="title" value="<%= jsonData.meta.title %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="author">Author<span class="text-rose-600">*</span></label>
+                <input type="text" id="author" name="author" value="<%= jsonData.meta.author %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="description">Description<span class="text-rose-600">*</span></label>
+                <input type="text" id="description" name="description" value="<%= jsonData.meta.description %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="keywords">Keywords<span class="text-rose-600">*</span></label>
+                <input type="text" id="keywords" name="keywords" value="<%= jsonData.meta.keywords %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <img class="h-12 w-12" src="/images/uploads/<%= jsonData.meta.favicon %>">
+                <label for="favicon">Favicon<span class="text-rose-600">*</span></label>
+                <input type="file" id="favicon" name="favicon" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+        </div>
+        <input type="submit" value="Save" class="mt-6 px-4 py-2 bg-blue-700 text-gray-200 rounded-lg hover:bg-blue-600">
+    </form>
+</div>

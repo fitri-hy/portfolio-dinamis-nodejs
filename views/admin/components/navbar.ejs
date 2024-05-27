@@ -3,7 +3,7 @@
             <button id="menuBtn" class="lg:hidden">
                 <i class="fas fa-bars text-slate-100 text-lg"></i>
             </button>
-            <a href="/admin" class="flex gap-2 items-center font-bold text-2xl lg:text-3xl text-gray-100">
+            <a href="/admin" class="hidden lg:flex gap-2 items-center font-bold text-2xl lg:text-3xl text-gray-100">
                 <img class="h-12 w-12" src="/images/logo/logo.png">
 				HyTech
             </a>
@@ -14,11 +14,29 @@
             </div>
         </div>
     </nav>
-    <div id="sideNav" class="lg:block hidden bg-slate-800 w-64 h-screen fixed rounded-none border-none">
-        <div class="p-4 space-y-4 text-gray-200">
-			<a href="/admin" class="px-4 py-3 flex items-center space-x-4 rounded-md group hover:bg-slate-700 pt-4">
+    <div id="sideNav" class="px-4 pt-9 lg:block hidden bg-slate-800 w-64 h-screen fixed rounded-none border-none">
+        <div class="text-gray-200">
+			<a href="/admin/#seo" class="px-4 py-2 flex items-center space-x-4 rounded-md group hover:bg-slate-700">
                 <i class="fas fa-home"></i>
-                <span class="-mr-1 font-medium">Dashboard</span>
+                <span class="-mr-1 font-medium">SEO</span>
+            </a>
+        </div>
+        <div class="text-gray-200 mt-2">
+			<a href="/admin/#header" class="px-4 py-2 flex items-center space-x-4 rounded-md group hover:bg-slate-700">
+                <i class="fas fa-home"></i>
+                <span class="-mr-1 font-medium">Header</span>
+            </a>
+        </div>
+        <div class="text-gray-200 mt-2">
+			<a href="/admin/#hero" class="px-4 py-2 flex items-center space-x-4 rounded-md group hover:bg-slate-700">
+                <i class="fas fa-home"></i>
+                <span class="-mr-1 font-medium">Hero</span>
+            </a>
+        </div>
+        <div class="text-gray-200 mt-2">
+			<a href="/admin/#partners" class="px-4 py-2 flex items-center space-x-4 rounded-md group hover:bg-slate-700">
+                <i class="fas fa-home"></i>
+                <span class="-mr-1 font-medium">Partners</span>
             </a>
         </div>
     </div>

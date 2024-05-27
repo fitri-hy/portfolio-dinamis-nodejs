@@ -1,0 +1,28 @@
+<div id="hero" class="flex flex-col gap-2 bg-slate-800 rounded-md px-4 py-6">
+    <h2 class="mb-6 font-extrabold text-2xl text-gray-200">Hero Settings</h2>
+    <form action="/admin/edit-hero" method="POST" enctype="multipart/form-data">
+        <div class="grid gird-cols-1 lg:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2">
+                <label for="title">Hero Title<span class="text-rose-600">*</span></label>
+                <textarea type="text" id="title" name="title" class="p-2 rounded-md bg-slate-900 text-gray-200" required><%= jsonData.hero.title %></textarea>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="subtitle">Hero Subtitle<span class="text-rose-600">*</span></label>
+                <textarea id="subtitle" name="subtitle" class="p-2 rounded-md bg-slate-900 text-gray-200" required><%= jsonData.hero.subtitle %></textarea>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="button_text">Button Text<span class="text-rose-600">*</span></label>
+                <input type="text" id="button_text" name="button_text" value="<%= jsonData.hero.button_text %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="button_url">Button URL<span class="text-rose-600">*</span></label>
+                <input type="url" id="button_url" name="button_url" value="<%= jsonData.hero.button_url %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="banner">Hero Banner<span class="text-rose-600">*</span></label>
+                <input type="file" id="banner" name="banner" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+        </div>
+        <input type="submit" value="Save" class="mt-6 px-4 py-2 bg-blue-700 text-gray-200 rounded-lg hover:bg-blue-600">
+    </form>
+</div>

@@ -1,0 +1,65 @@
+<div id="featured" class="flex flex-col gap-2 bg-slate-800 rounded-md px-4 py-6">
+    <h2 class="mb-6 font-extrabold text-2xl text-gray-200">Featured Settings</h2>
+    <form action="/admin/edit-featured" method="POST">
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+                <label for="span_title">Featured Category<span class="text-rose-600">*</span></label>
+                <input type="text" id="span_title" name="span_title" value="<%= jsonData.featured.span_title %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="title">Featured Title<span class="text-rose-600">*</span></label>
+                <input type="text" id="title" name="title" value="<%= jsonData.featured.title %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="subtitle">Featured Description<span class="text-rose-600">*</span></label>
+                <textarea type="text" id="subtitle" name="subtitle" class="p-2 rounded-md bg-slate-900 text-gray-200" required><%= jsonData.featured.subtitle %></textarea>
+            </div>
+        </div>
+        <input type="submit" value="Save" class="mt-4 px-4 py-2 bg-blue-700 text-gray-200 rounded-lg hover:bg-blue-600">
+    </form>
+    <h2 class="mt-6 font-extrabold text-2xl text-gray-200">Add Featured</h2>
+    <form action="/admin/add-featured" method="POST">
+        <div class="grid grid-cols-1 gap-4">
+            <div class="flex flex-col gap-2">
+                <label for="title">Title<span class="text-rose-600">*</span></label>
+                <input type="text" id="title" name="title" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="subtitle">Description<span class="text-rose-600">*</span></label>
+                <textarea type="text" id="subtitle" name="subtitle" class="p-2 rounded-md bg-slate-900 text-gray-200" required></textarea>
+            </div>
+        </div>
+        <input type="submit" value="Add" class="mt-4 px-4 py-2 bg-emerald-600 text-gray-200 rounded-lg hover:bg-emerald-700">
+    </form>
+    <div class="overflow-x-auto">
+        <table class="table-auto min-w-full mt-6">
+            <thead>
+                <tr class="bg-slate-700">
+                    <th class="px-4 py-2 text-left">Title</th>
+                    <th class="px-4 py-2 text-left">Description</th>
+                    <th class="px-4 py-2">Action</th>
+                </tr>
+            </thead>
+            <tbody class="w-full">
+                <% jsonData.featured.featured_card.forEach(function(data) { %>
+                    <tr class="border-b border-gray-700">
+                        <td class="px-4 py-2 w-full">
+                            <p class="line-clamp-1"><%= data.title %></p>
+                        </td>
+                        <td class="px-4 py-2 w-full min-w-[250px]">
+                            <p class="line-clamp-1"><%= data.subtitle %></p>
+                        </td>
+                        <td class="px-4 py-2 flex items-center justify-center" style="min-width: 200px;">
+                            <form action="/admin/delete-featured/<%= data.id %>" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="px-4 py-2 bg-rose-700 text-gray-200 rounded-lg text-center hover:bg-rose-600">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>								
+            </tbody>
+        </table>
+    </div>
+    
+
+</div>

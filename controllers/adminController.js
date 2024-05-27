@@ -145,7 +145,6 @@ exports.addPartnersBannerData = async (req, res) => {
         try {
             const jsonData = await dataModel.getData();
 
-            // Calculate the next sequential id
             const existingIds = jsonData.partners.partners_img.map(img => img.id);
             const nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 1;
 
@@ -163,4 +162,94 @@ exports.addPartnersBannerData = async (req, res) => {
             res.status(500).send('Error saving edited data');
         }
     });
+};
+
+exports.deletePartnersBannerData = async (req, res) => {
+    const partnerImgId = req.params.id;
+
+    try {
+        let jsonData = await dataModel.getData();
+
+        const index = jsonData.partners.partners_img.findIndex(img => img.id === parseInt(partnerImgId));
+
+        if (index !== -1) {
+            jsonData.partners.partners_img.splice(index, 1);
+
+            await dataModel.saveData(jsonData);
+
+            res.redirect('/admin');
+        } else {
+            res.status(404).send('Partner image not found');
+        }
+    } catch (err) {
+        console.error('Error deleting partner image:', err);
+        res.status(500).send('Error deleting partner image');
+    }
+};
+
+exports.editFeaturedData = async (req, res) => {
+    const editedData = req.body;
+    try {
+        const jsonData = await dataModel.getData();
+        Object.assign(jsonData.featured, editedData);
+        await dataModel.saveData(jsonData);
+        res.redirect('/admin');
+    } catch (err) {
+        console.error('Error saving edited data:', err);
+        res.status(500).send('Error saving edited data');
+    }
+};
+
+exports.addFeaturedData = async (req, res) => {
+    const newData = req.body;
+    try {
+        const jsonData = await dataModel.getData();
+        
+        if (!jsonData.featured.featured_card || !Array.isArray(jsonData.featured.featured_card)) {
+            throw new Error('Invalid or missing featured_card data');
+        }
+
+        const highestId = jsonData.featured.featured_card.reduce((maxId, card) => {
+            return card.id > maxId ? card.id : maxId;
+        }, 0);
+
+        newData.id = highestId + 1;
+
+        jsonData.featured.featured_card.push(newData);
+
+        jsonData.featured.featured_card.sort((a, b) => a.id - b.id);
+
+        await dataModel.saveData(jsonData);
+
+        res.redirect('/admin');
+    } catch (err) {
+        console.error('Error saving edited data:', err);
+        res.status(500).send('Error saving edited data');
+    }
+};
+
+exports.deleteFeaturedData = async (req, res) => {
+    const deleteId = parseInt(req.params.id);
+    try {
+        const jsonData = await dataModel.getData();
+        
+        if (!jsonData.featured.featured_card || !Array.isArray(jsonData.featured.featured_card)) {
+            throw new Error('Invalid or missing featured_card data');
+        }
+
+        const indexToDelete = jsonData.featured.featured_card.findIndex(card => card.id === deleteId);
+
+        if (indexToDelete === -1) {
+            throw new Error('Data with the given ID not found');
+        }
+
+        jsonData.featured.featured_card.splice(indexToDelete, 1);
+
+        await dataModel.saveData(jsonData);
+
+        res.redirect('/admin');
+    } catch (err) {
+        console.error('Error deleting data:', err);
+        res.status(500).send('Error deleting data');
+    }
 };
