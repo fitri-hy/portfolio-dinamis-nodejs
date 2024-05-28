@@ -24,8 +24,9 @@ Changing or adding login data:
 `models/adminModel.js`
 
 ```
+// Bcrypt Hash Password
 this.users = [
-	{ username: 'admin', passwordHash: '$2a$12$GIsTi7uPMiUds7QwHn8anuE1XSDSGesrLmKCoQLkmmJVYIeAYAM2y' }
+   { username: 'admin', passwordHash: '$2a$12$GIsTi7uPMiUds7QwHn8anuE1XSDSGesrLmKCoQLkmmJVYIeAYAM2y' }
 ];
 ```
 
