@@ -1,0 +1,72 @@
+<%- include('../partials/head') %>
+<%- include('../components/navbar') %>
+<main class="flex flex-col gap-4 lg:ml-64 lg:pl-4 lg:w-75% mt-6 mx-4 mb-12">
+
+<div id="services" class="flex flex-col gap-2 bg-slate-800 rounded-md px-4 py-6">
+    <h2 class="mb-6 font-extrabold text-2xl text-gray-200">Testimonial Settings</h2>
+    <form action="/admin/edit-testimonial" method="POST">
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+                <label for="title">Testimonial Title<span class="text-rose-600">*</span></label>
+                <input type="text" id="title" name="title" value="<%= jsonData.testimonial.title %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="subtitle">Testimonial Description<span class="text-rose-600">*</span></label>
+                <textarea type="text" id="subtitle" name="subtitle" class="p-2 rounded-md bg-slate-900 text-gray-200" required><%= jsonData.testimonial.subtitle %></textarea>
+            </div>
+        </div>
+        <input type="submit" value="Save" class="mt-4 px-4 py-2 bg-blue-700 text-gray-200 rounded-lg hover:bg-blue-600">
+    </form>
+    <h2 class="mt-12 font-extrabold text-2xl text-gray-200">Add Testimonial</h2>
+    <form action="/admin/add-testimonial" method="POST">
+        <div class="flex flex-col gap-2 mt-4">
+			<label for="name">Name<span class="text-rose-600">*</span></label>
+			<input type="text" id="name" name="name" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+		</div>
+		<div class="flex flex-col gap-2 mt-4">
+			<label for="status">Status<span class="text-rose-600">*</span></label>
+			<input type="text" id="status" name="status" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+		</div>
+        <div class="flex flex-col gap-2 mt-4">
+			<label for="content">Description<span class="text-rose-600">*</span></label>
+			<textarea type="text" id="content" name="content" class="p-2 rounded-md bg-slate-900 text-gray-200" required></textarea>
+		</div>
+        <input type="submit" value="Add" class="mt-4 px-4 py-2 bg-emerald-600 text-gray-200 rounded-lg hover:bg-emerald-700">
+    </form>
+    <div class="overflow-x-auto">
+        <table class="table-auto min-w-full mt-6">
+            <thead>
+                <tr class="bg-slate-700">
+                    <th class="px-4 py-2 text-left">Name</th>
+                    <th class="px-4 py-2 text-left">Status</th>
+                    <th class="px-4 py-2 text-left">Content</th>
+                    <th class="px-4 py-2">Action</th>
+                </tr>
+            </thead>
+            <tbody class="w-full">
+                <% jsonData.testimonial.testimonial_card.forEach(function(data) { %>
+                    <tr class="border-b border-gray-700">
+						<td class="px-4 py-2">
+                            <p class="line-clamp-1"><%= data.name %></p>
+                        </td>
+                        <td class="px-4 py-2">
+                            <p class="line-clamp-1"><%= data.status %></p>
+                        </td>
+                        <td class="px-4 py-2">
+                            <p class="line-clamp-1"><%= data.content %></p>
+                        </td>
+                        <td class="px-4 py-2 flex items-center justify-center" style="min-width: 200px;">
+                            <form action="/admin/delete-testimonial/<%= data.id %>" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="px-4 py-2 bg-rose-700 text-gray-200 rounded-lg text-center hover:bg-rose-600">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>								
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,23 @@
+<%- include('../partials/head') %>
+<%- include('../components/navbar') %>
+<main class="flex flex-col gap-4 lg:ml-64 lg:pl-4 lg:w-75% mt-6 mx-4 mb-12">
+
+<div id="header" class="flex flex-col gap-2 bg-slate-800 rounded-md px-4 py-6">
+    <h2 class="mb-6 font-extrabold text-2xl text-gray-200">Footer Settings</h2>
+	<form action="/admin/edit-footer" method="POST">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+			<div class="flex flex-col gap-2">
+				<label for="company">Company<span class="text-rose-600">*</span></label>
+				<input type="text" id="company" name="company" value="<%= jsonData.footer.company %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+			</div>
+			<div class="flex flex-col gap-2">
+				<label for="copyright">Company<span class="text-rose-600">*</span></label>
+				<input type="text" id="copyright" name="copyright" value="<%= jsonData.footer.copyright %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+			</div>
+		</div>
+		<input type="submit" value="Save" class="mt-4 px-4 py-2 bg-blue-700 text-gray-200 rounded-lg hover:bg-blue-600">
+	</form>
+</div>
+
+</main>
+<%- include('../partials/footer') %>

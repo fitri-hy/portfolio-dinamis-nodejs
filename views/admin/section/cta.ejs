@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+<%- include('../components/navbar') %>
+<main class="flex flex-col gap-4 lg:ml-64 lg:pl-4 lg:w-75% mt-6 mx-4 mb-12">
+
+<div id="header" class="flex flex-col gap-2 bg-slate-800 rounded-md px-4 py-6">
+    <h2 class="mb-6 font-extrabold text-2xl text-gray-200">CTA Settings</h2>
+	<form action="/admin/edit-cta" method="POST">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+			<div class="flex flex-col gap-2">
+				<label for="title">Title<span class="text-rose-600">*</span></label>
+				<input type="text" id="title" name="title" value="<%= jsonData.cta.title %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+			</div>
+			<div class="flex flex-col gap-2">
+				<label for="button_text">Button Text<span class="text-rose-600">*</span></label>
+				<input type="text" id="button_text" name="button_text" value="<%= jsonData.cta.button_text %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+			</div>
+			<div class="flex flex-col gap-2">
+				<label for="button_url">Button Url<span class="text-rose-600">*</span></label>
+				<input type="url" id="button_url" name="button_url" value="<%= jsonData.cta.button_url %>" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
+			</div>
+		</div>
+		<div class="flex flex-col gap-2 mt-6">
+			<label for="subtitle">Description<span class="text-rose-600">*</span></label>
+			<textarea type="text" id="subtitle" name="subtitle" class="p-2 rounded-md bg-slate-900 text-gray-200" required><%= jsonData.cta.subtitle %></textarea>
+		</div>
+		<input type="submit" value="Save" class="mt-4 px-4 py-2 bg-blue-700 text-gray-200 rounded-lg hover:bg-blue-600">
+	</form>
+</div>
+
+</main>
+<%- include('../partials/footer') %>

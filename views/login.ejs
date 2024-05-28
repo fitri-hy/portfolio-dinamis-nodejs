@@ -1,0 +1,23 @@
+<%- include('partials/head') %>
+<body class="bg-slate-900 text-gray-300 flex items-center justify-center h-screen">
+    <main class="w-full max-w-sm bg-slate-800 px-12 rounded-lg">
+        <div class="flex flex-col gap-2 rounded-md px-4 py-6 text-center py-9">
+            <h2 class="font-extrabold text-3xl text-gray-200">Login Admin</h2>
+            <% if (message) { %>
+                <p class="py-2 bg-rose-500 rounded-md text-gray-300 mt-4"><%= message %></p>
+            <% } %>
+            <form action="/login" method="post">
+                <div class="flex flex-col gap-2 text-left mt-9">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="p-2 bg-slate-700 text-gray-200 rounded-lg focus:outline-none" required>
+                </div>
+                <div class="flex flex-col gap-2 text-left mt-4">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="p-2 bg-slate-700 text-gray-200 rounded-lg focus:outline-none" required>
+                </div>
+                <button type="submit" class="rounded-lg bg-blue-700 hover:bg-blue-600 px-4 py-2 mt-6">Login</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

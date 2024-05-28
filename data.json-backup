@@ -138,21 +138,18 @@
     "testimonial_card": [
       {
         "id": 1,
-        "images": "img-1-1e9aa300.jpg",
         "name": "Ryan Delk",
         "status": "Client",
         "content": "As a content marketer, I'm always looking for ways to streamline my workflow and create high-quality for me, and I don't know how I ever managed without it."
       },
       {
         "id": 2,
-        "images": "img-2-a35f473e.jpg",
         "name": "Marsel Fischer",
         "status": "Client",
         "content": "The solutions offered by your AI chatbots are truly impressive! We are able to communicate with our customers faster and more interacti."
       },
       {
         "id": 3,
-        "images": "img-3-8c3c7453.jpg",
         "name": "John Tayes",
         "status": "Client",
         "content": "I've tried other AI writing tools before, but this one is by far the best. The language is sophisticated and engaging, content to the next level."
@@ -232,9 +229,5 @@
   "footer": {
     "company": "HyTech Group",
     "copyright": "All Right Reserved."
-  },
-  "title": "Home - HyTech MsasasVC",
-  "author": "sasa",
-  "description": "Portofolio Disasanamis",
-  "keywords": "portofolio,sasa dinamis"
+  }
 }

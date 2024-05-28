@@ -1,3 +1,7 @@
+<%- include('../partials/head') %>
+<%- include('../components/navbar') %>
+<main class="flex flex-col gap-4 lg:ml-64 lg:pl-4 lg:w-75% mt-6 mx-4 mb-12">
+
 <div id="hero" class="flex flex-col gap-2 bg-slate-800 rounded-md px-4 py-6">
     <h2 class="mb-6 font-extrabold text-2xl text-gray-200">Hero Settings</h2>
     <form action="/admin/edit-hero" method="POST" enctype="multipart/form-data">
@@ -20,9 +24,13 @@
             </div>
             <div class="flex flex-col gap-2">
                 <label for="banner">Hero Banner<span class="text-rose-600">*</span></label>
+				<img class="h-36 w-44 rounded-md object-cover" src="/images/uploads/<%= jsonData.hero.banner %>">
                 <input type="file" id="banner" name="banner" class="p-2 rounded-md bg-slate-900 text-gray-200" required>
             </div>
         </div>
         <input type="submit" value="Save" class="mt-6 px-4 py-2 bg-blue-700 text-gray-200 rounded-lg hover:bg-blue-600">
     </form>
 </div>
+
+</main>
+<%- include('../partials/footer') %>
