@@ -1,3 +1,5 @@
+<img src="./Screenshot.png">
+
 # Portfolio Dinamis NodeJS
 Dynamic Website Portfolio Using NodesJS MVC (Models-Views-Controller). Doesn't use a database connection but instead uses local JSON as the database
 
@@ -27,4 +29,9 @@ this.users = [
 ];
 ```
 
-<img src="./Screenshot.png">
+## Technology
+
+- Node JS.
+- Tailwind.
+- EJS.
+- Other supporting modules.
