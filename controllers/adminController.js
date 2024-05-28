@@ -19,6 +19,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 exports.editSeoData = (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     upload.single('favicon')(req, res, async (err) => {
         if (handleMulterError(err, res)) return;
 
@@ -41,6 +46,11 @@ exports.editSeoData = (req, res) => {
 };
 
 exports.editHeaderData = (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     upload.fields([{ name: 'logo_dark', maxCount: 1 }, { name: 'logo_light', maxCount: 1 }])(req, res, async (err) => {
         if (handleMulterError(err, res)) return;
 
@@ -67,6 +77,11 @@ exports.editHeaderData = (req, res) => {
 };
 
 exports.editHeroData = (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     upload.single('banner')(req, res, async (err) => {
         if (handleMulterError(err, res)) return;
 
@@ -89,6 +104,11 @@ exports.editHeroData = (req, res) => {
 };
 
 exports.editPartnersData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const editedData = req.body;
         const jsonData = await dataModel.getData();
@@ -102,6 +122,11 @@ exports.editPartnersData = async (req, res) => {
 };
 
 exports.addPartnersBannerData = (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     upload.single('images')(req, res, async (err) => {
         if (handleMulterError(err, res)) return;
 
@@ -128,6 +153,11 @@ exports.addPartnersBannerData = (req, res) => {
 };
 
 exports.deletePartnersBannerData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const partnerImgId = parseInt(req.params.id);
         let jsonData = await dataModel.getData();
@@ -148,6 +178,11 @@ exports.deletePartnersBannerData = async (req, res) => {
 };
 
 exports.editFeaturedData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const editedData = req.body;
         const jsonData = await dataModel.getData();
@@ -161,6 +196,11 @@ exports.editFeaturedData = async (req, res) => {
 };
 
 exports.addFeaturedData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const newData = req.body;
         const jsonData = await dataModel.getData();
@@ -184,6 +224,11 @@ exports.addFeaturedData = async (req, res) => {
 };
 
 exports.deleteFeaturedData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const deleteId = parseInt(req.params.id);
         const jsonData = await dataModel.getData();
@@ -209,6 +254,11 @@ exports.deleteFeaturedData = async (req, res) => {
 };
 
 exports.editAboutData = (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     upload.single('images')(req, res, async (err) => {
         if (handleMulterError(err, res)) return;
 
@@ -231,6 +281,11 @@ exports.editAboutData = (req, res) => {
 };
 
 exports.addAboutData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const newData = req.body;
         const jsonData = await dataModel.getData();
@@ -254,6 +309,11 @@ exports.addAboutData = async (req, res) => {
 };
 
 exports.deleteAboutData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const deleteId = parseInt(req.params.id);
         const jsonData = await dataModel.getData();
@@ -279,6 +339,11 @@ exports.deleteAboutData = async (req, res) => {
 };
 
 exports.addAboutCountData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const newData = req.body;
         const jsonData = await dataModel.getData();
@@ -302,6 +367,11 @@ exports.addAboutCountData = async (req, res) => {
 };
 
 exports.deleteAboutCountData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const deleteId = parseInt(req.params.id);
         const jsonData = await dataModel.getData();
@@ -327,6 +397,11 @@ exports.deleteAboutCountData = async (req, res) => {
 };
 
 exports.editServicesData = (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     upload.single('images')(req, res, async (err) => {
         if (handleMulterError(err, res)) return;
 
@@ -349,6 +424,11 @@ exports.editServicesData = (req, res) => {
 };
 
 exports.addServicesData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const newData = req.body;
         const jsonData = await dataModel.getData();
@@ -372,6 +452,11 @@ exports.addServicesData = async (req, res) => {
 };
 
 exports.deleteServicesData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const deleteId = parseInt(req.params.id);
         const jsonData = await dataModel.getData();
@@ -397,6 +482,11 @@ exports.deleteServicesData = async (req, res) => {
 };
 
 exports.deleteFaqData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const deleteId = parseInt(req.params.id);
         const jsonData = await dataModel.getData();
@@ -422,6 +512,11 @@ exports.deleteFaqData = async (req, res) => {
 };
 
 exports.addFaqData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const newData = req.body;
         const jsonData = await dataModel.getData();
@@ -445,6 +540,11 @@ exports.addFaqData = async (req, res) => {
 };
 
 exports.editFaqData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const editedData = req.body;
         const jsonData = await dataModel.getData();
@@ -458,6 +558,11 @@ exports.editFaqData = async (req, res) => {
 };
 
 exports.editCtaData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const editedData = req.body;
         const jsonData = await dataModel.getData();
@@ -471,6 +576,11 @@ exports.editCtaData = async (req, res) => {
 };
 
 exports.editFooterData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const editedData = req.body;
         const jsonData = await dataModel.getData();
@@ -484,6 +594,11 @@ exports.editFooterData = async (req, res) => {
 };
 
 exports.editTestimonialData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const editedData = req.body;
         const jsonData = await dataModel.getData();
@@ -497,6 +612,11 @@ exports.editTestimonialData = async (req, res) => {
 };
 
 exports.addTestimonialData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const newData = req.body;
         const jsonData = await dataModel.getData();
@@ -520,6 +640,11 @@ exports.addTestimonialData = async (req, res) => {
 };
 
 exports.deleteTestimonialData = async (req, res) => {
+
+    if (!req.session.isLoggedIn) {
+        return res.redirect('/login');
+    }
+	
     try {
         const deleteId = parseInt(req.params.id);
         const jsonData = await dataModel.getData();

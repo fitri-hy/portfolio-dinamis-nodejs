@@ -1,3 +1,4 @@
+// app.js
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
@@ -28,12 +29,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
   secret: 'secret-key',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie: { secure: false }
 }));
 
 app.use('/', pageRoutes);
+
 app.use((req, res, next) => {
-	fs.readFile('data.json', 'utf8', (err, data) => {
+    fs.readFile('data.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             return res.status(500).send('Error reading JSON file');
@@ -41,9 +44,8 @@ app.use((req, res, next) => {
         
         try {
             const jsonData = JSON.parse(data);
-
             res.status(404).render('404', { 
-				jsonData: jsonData
+                jsonData: jsonData
             });
         } catch (parseErr) {
             console.error(parseErr);

@@ -1,8 +1,14 @@
 <%- include('./partials/head') %>
 <%- include('./components/navbar') %>
 <main class="flex flex-col gap-4 lg:ml-64 lg:pl-4 lg:w-75% mt-6 mx-4 mb-12">
-
-		Welcome Dashboard
-		
+    <div id="featured" class="flex flex-col bg-slate-800 items-center rounded-md px-6 py-12 text-gray-200">
+        <div class="max-w-md flex flex-col gap-2 text-center min-h-[70vh]">
+			<p class="text-xl">Welcome to</p>
+			<h1 class="text-3xl font-extrabold">HyPortfolio Dashboard</h1>
+			<p class="mt-4">
+				Dynamic Website Portfolio Using NodesJS MVC (Models-Views-Controller). Doesn't use a database connection but instead uses local JSON as the database
+			</p>
+		</div>
+    </div>
 </main>
 <%- include('./partials/footer') %>

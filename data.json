@@ -1,46 +1,50 @@
 {
   "meta": {
-    "title": "HyTech",
-    "description": "loren ipsum dolor",
-    "keywords": "test",
-    "author": "HyTech",
-    "favicon": "favicon-b2cb7bc5.ico"
+    "title": "HyPortfolio",
+    "description": "Create dynamic Portfolios with attractive, mobile-friendly designs",
+    "keywords": "hyportfolio, portfolio, web profile",
+    "author": "HyTech Group",
+    "favicon": "9f0f746bd490aaa55a19ec03b5f621b4.png"
   },
   "header": {
-    "logo_dark": "logo-dark-dc129ba6.png",
-    "logo_light": "logo-light-82928a21.png",
-    "button_text": "0896-1111-1111",
-    "button_url": "tel:089611111111"
+    "logo_dark": "a7671b7c9ea3c9c265932b290f4c9531.png",
+    "logo_light": "8f1cc5fec232d1da3042bd59e6552ae7.png",
+    "button_text": "0815-2597-7595",
+    "button_url": "https://api.whatsapp.com/send/?phone=6281525977595&"
   },
   "hero": {
     "title": "Enhance Your Online Presence with Our Expertise",
     "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "banner": "img-1-0feedb71.jpg",
+    "banner": "c13fb065dc35659913c20ec9e4b18b55.png",
     "button_text": "Read More",
-    "button_url": "#"
+    "button_url": "http://localhost:3000/"
   },
   "partners": {
     "title": "Preferred Partner for Major Corporations",
     "partners_img": [
       {
         "id": 1,
-        "images": "1-52ac3196.png"
+        "images": "0d0ee5dbb1e0a73986ad3118f4f2fc6b.png"
       },
       {
         "id": 2,
-        "images": "2-b64208fb.png"
+        "images": "9d815e1edde79ea4508dc44f9e1d3931.png"
       },
       {
         "id": 3,
-        "images": "3-cc9f0d7e.png"
+        "images": "d6cde1e90fd8993a6f95162e148642bf.png"
       },
       {
         "id": 4,
-        "images": "4-a09c1173.png"
+        "images": "6f93e94737f9fe5e8521e513176c300c.png"
       },
       {
         "id": 5,
-        "images": "5-a36f86d5.png"
+        "images": "c4f1e0637d7f1325a6d298cf2b3c3e6e.png"
+      },
+      {
+        "id": 6,
+        "images": "ed628cf21c135483a564a924bcc55068.png"
       }
     ]
   },
@@ -67,7 +71,7 @@
     ]
   },
   "about": {
-    "images": "img-6-63138509.jpg",
+    "images": "318945ea1c304f3216673a23407aa102.jpg",
     "span_title": "Our About",
     "title": "Fifteen Years of SEO Mastery",
     "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
